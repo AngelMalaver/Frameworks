@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+
+
+:root{
+    --test-border: rgb(141, 141, 141) solid;
+    --border-rd: 0px;
+    --border-th-test: 2px;
+    --position-test: relative;
+    --main-bg-color: white;
+    --scdry-color: white;
+    --auto-width: auto;
+    --font: 'Roboto', sans-serif;
+    --edit-text-color: rgb(26, 16, 48);
+    --border-color: rgb(4, 12, 102);
+}
+
+/* Estilos globales */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: var(--font);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar {
+    display: flex;
+    border: var(--test-border);
+    position: relative; /* Asegura que la posición es relativa al contenedor padre */
+    border-radius: var(--border-rd);
+    border-width: var(--border-th-test);
+    height: 45px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ocupar todo el ancho del elemento main */
+}
+
+.notesForm {
+    margin: 10px 0 0 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.6fr 0.1fr;
+    width: var(--auto-width);
+    gap: 13px;
+    padding: 6px;
+    height: 400px;
+}
+
+.appInput {
+    display: grid;
+    width: var(--auto-width);
+    height: auto;
+    background-color: var(--scdry-color);
+    border-color: var(--scdry-color);
+    color: var(--edit-text-color);
+    transition: border-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.appInput:focus {
+    border-color: var(--border-color);
+    border-width: 3px;
+    outline: none;
+}
+
+.appInput::placeholder {
+    color: var(--edit-text-color);
+}
+
+.appText {
+    width: var(--auto-width);
+    background-color: var(--scdry-color);
+    color: var(--edit-text-color);
+    transition: border-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.appText:focus {
+    border-color: var(--border-color);
+    border-width: 3px;
+    outline: none;
+}
+
+.appText::placeholder {
+    color: var(--edit-text-color);
+}
+
+.submitButton {
+    background-color: rgb(32, 255, 32);
+    width: 50%;
+    justify-self: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color:white
+}
+
+.submitButton:hover {
+    background-color: rgb(94, 255, 94);
+}
+
+.addNoteLogo, .loginLogo {
+    cursor: pointer;
+}
+
+.navBar .logos {
+    flex: 1;
+}
+
+.navBar .infoText {
+    flex: 2;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    width: 30%;
+    height: 25%;
+    overflow-x: auto;
+}
+
+#root {
+    height: 100vh;
+    top: 0;
+}
+
+
+
+
+.logos{
+    display: flex;
+    position: relative;
+    left: 0;
+    width: fit-content;
+    margin-left: 5px;
+    
+}
+
+.sidebar{
+    left: 0;
+    border: var(--test-border);
+    position: var(--position-test);
+    width: 30%;
+    height: 100%;
+    border-radius: var(--border-rd);
+    border-width: var(--border-th-test);
+    overflow: auto;
+    border-width: var(--border-th-test) ;
+    padding: 5px;
+    border-color: var(--border-color);
+}
+
+.textContent{
+    right: 0;
+    border: var(--test-border);
+    position: var(--position-test);
+    border-width: var(--border-th-test);
+    border-color: var(--border-color);
+    width: 69%;
+    margin-left: auto;
+    border-radius: var(--border-rd);
+    padding: 7px;
+}
+
+
+
+html, body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
+.PrimeSection {
+    display: grid;
+    height: 80%; 
+    text-align: center;
+    width: 95%;
+    grid-template-rows: auto 1fr; 
+}
+
+.navBar {
+    display: flex;
+    border: var(--test-border);
+    position: relative; 
+    border-radius: var(--border-rd);
+    border-width: var(--border-th-test);
+    height: 45px;
+    border-color: var(--border-color);
+    color: var(--edit-text-color);
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.mainSection {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* height: fit-content;  */
+}
+
+.notesForm{
+    margin: 10px 0px 0px 0px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.6fr 0.1fr;
+    width: var(--auto-width);
+    gap: 13px;
+    padding: 6px;
+    /* border: var(--test-border);
+    border-width: var(--border-th-test); */
+    height: 400px;
+}
+
+.appInput{
+    display: grid;
+    width: var(--auto-width);
+    height: auto;
+    background-color: var(--scdry-color);
+    border-color: var(--scdry-color);
+    color: var(--edit-text-color);
+    transition: border-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.appInput:focus{
+    border-color: var(--border-color);
+    border-width: 3px;
+    outline: none;
+}
+
+.appInput::placeholder{
+    color: var(--edit-text-color);
+}
+
+.appText{
+    width: var(--auto-width);
+    background-color: var(--scdry-color);
+    color: var(--edit-text-color);
+    transition: border-color 0.3 ease;
+    border-radius: 2px;
+}
+
+.appText:focus{
+    border-color: var(--border-color);
+    border-width: 3px;
+    outline: none;
+}
+
+.appText::placeholder{
+    color: var(--edit-text-color)
+}
+
+.submitButton{
+    background-color: rgb(39, 82, 125);
+    width: 50%;
+    justify-self: center;
+    border: none;
+    border-radius: 5em;
+    cursor: pointer;
+}
+
+.submitButton:hover{
+    background-color: rgb(94, 255, 94);
+}
+
+.addNoteLogo, .loginLogo{
+    cursor: pointer;
+}
+
+.navBar .logos{
+    flex: 1
+}
+
+.navBar .infoText{
+    flex: 2
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.noteCard{
+    background-color: rgb(181, 194, 212);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.noteCard:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+
+
+
+#root{
+    height: 100vh;
+    top: 0;
+
+}
+
+.logIn{
+    height: 30%;
+    border: var(--test-border);
+    background-color: white;
+    border-radius: 10px;
+
+    /* justify-content: center; */
+}
+
+.logIn form{
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logIn form input{
+    width: 80%;
+    justify-self: center;
+    border-width: 1.5px;
+    border-style: groove;
+}
+
+.logIn .loginButton{
+    justify-self: center;
+    width: 60%;
+}
