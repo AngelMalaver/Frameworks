@@ -1,7 +1,7 @@
 export const usuarios = [
     {
         'user': 'AngelSmasherFanDeVictoria',
-        'password': 'GabrielaReyteamouwuwuMorochitas'
+        'password': 'Saritamiamorteamouwuwu-Morochitas'
     },
     {
         'user': 'Angel',

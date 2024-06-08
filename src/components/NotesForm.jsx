@@ -28,29 +28,72 @@ export const NotesForm = () =>{
         setDescription("");
     }
     return(
-        <form onSubmit={onSubmit} className="notesForm">
+        <form onSubmit={onSubmit} className="notesForm" style={{ 
+            backgroundColor: '#F5F5F5', 
+            padding: '30px',
+            borderRadius: '15px',
+            boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)',
+            maxWidth: '600px',
+            margin: '20px auto'
+        }}>
             <input 
-                placeholder="Ingrese el titulo"
+                placeholder="Pon un titulo"
                 onChange={(e)=>{setTitle(e.target.value)}}
                 value= {title}
                 className="appInput"
+                style={{ 
+                    display: 'block',
+                    width: '100%',
+                    margin: '20px 0',
+                    padding: '15px',
+                    borderRadius: '10px',
+                    border: '1px solid #CCC',
+                    fontSize: '18px'
+                }}
             />
             <textarea 
-                placeholder = "Ingrese la descripcion"
+                placeholder = "aqui van las notitass (っ ◕‿◕ )っ uwu"
                 onChange={(e)=>{setDescription(e.target.value)}}
                 value = {description}
                 className="appText"
+                style={{ 
+                    display: 'block',
+                    width: '100%',
+                    margin: '20px 0',
+                    padding: '15px',
+                    borderRadius: '10px',
+                    border: '1px solid #CCC',
+                    minHeight: '200px',
+                    fontSize: '16px'
+                }}
             ></textarea>
             {
                 title === '' && description === '' && (
                     <div style={{
-                        color: 'red'
+                        color: 'red',
+                        fontSize: '14px',
+                        marginBottom: '10px'
                     }}>
-                        Contenio vacio, por favor ingrese texto
+                         Pofavor pon algo si no no se guarda mi rey
                     </div>
                 )
             }
-            <button className="submitButton">Enviar</button>
+            <button className="submitButton" style={{ 
+                backgroundColor: '#333', 
+                color: '#F5F5F5', 
+                padding: '15px 30px',
+                borderRadius: '10px',
+                border: 'none',
+                cursor: 'pointer',
+                display: 'block',
+                width: '100%',
+                marginTop: '20px',
+                transition: 'background-color 0.3s ease',
+                fontSize: '18px'
+            }}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#555'}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#333'}
+            >Enviar</button>
         </form>
     )
 }

@@ -28,8 +28,8 @@ html, body {
 
 body {
     font-family: var(--font);
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-color: #d1d1d1;
+    background-image: linear-gradient(160deg, #a7a6a6 0%, #7d7e7e 100%);
 }
 
 main{
